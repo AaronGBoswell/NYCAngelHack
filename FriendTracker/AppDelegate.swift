@@ -15,6 +15,35 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        
+        let yesAction = UIMutableUserNotificationAction()
+        yesAction.identifier = "yesAction"
+        yesAction.title = "Yes"
+        yesAction.activationMode = UIUserNotificationActivationMode.Background
+        yesAction.destructive = true
+        yesAction.authenticationRequired = false
+        
+        let noAction = UIMutableUserNotificationAction()
+        noAction.identifier = "noAction"
+        noAction.title = "no"
+        noAction.activationMode = UIUserNotificationActivationMode.Foreground
+        noAction.destructive = false
+        noAction.authenticationRequired = false
+        
+        let category = UIMutableUserNotificationCategory()
+        category.identifier = "category"
+        category.setActions([yesAction,noAction], forContext:UIUserNotificationActionContext.Default)
+        
+        
+        
+        var type = UIUserNotificationType.Alert
+        type = type.union(UIUserNotificationType.Badge)
+        type = type.union(UIUserNotificationType.Sound)
+        let settings = UIUserNotificationSettings(forTypes: type, categories: [category])
+        
+        
+        UIApplication.sharedApplication().registerUserNotificationSettings(settings)
+        print("setup done")
         // Override point for customization after application launch.
         return true
     }

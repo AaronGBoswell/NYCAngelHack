@@ -8,20 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		BDFD1B701D034699008C0372 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFD1B6F1D034699008C0372 /* AppDelegate.swift */; };
-		BDFD1B721D034699008C0372 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFD1B711D034699008C0372 /* ViewController.swift */; };
+		BDFD1B721D034699008C0372 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFD1B711D034699008C0372 /* StartViewController.swift */; };
 		BDFD1B751D034699008C0372 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDFD1B731D034699008C0372 /* Main.storyboard */; };
 		BDFD1B771D034699008C0372 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDFD1B761D034699008C0372 /* Assets.xcassets */; };
 		BDFD1B7A1D034699008C0372 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDFD1B781D034699008C0372 /* LaunchScreen.storyboard */; };
+		BDFD1B821D034A96008C0372 /* PassiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFD1B811D034A96008C0372 /* PassiveViewController.swift */; };
+		BDFD1B841D034C00008C0372 /* PasscodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFD1B831D034C00008C0372 /* PasscodeViewController.swift */; };
+		BDFD1B861D034C09008C0372 /* DangerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFD1B851D034C09008C0372 /* DangerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		BDFD1B6C1D034699008C0372 /* FriendTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FriendTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDFD1B6F1D034699008C0372 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BDFD1B711D034699008C0372 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BDFD1B711D034699008C0372 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		BDFD1B741D034699008C0372 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BDFD1B761D034699008C0372 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BDFD1B791D034699008C0372 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BDFD1B7B1D034699008C0372 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BDFD1B811D034A96008C0372 /* PassiveViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PassiveViewController.swift; sourceTree = "<group>"; };
+		BDFD1B831D034C00008C0372 /* PasscodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasscodeViewController.swift; sourceTree = "<group>"; };
+		BDFD1B851D034C09008C0372 /* DangerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DangerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,8 +61,11 @@
 			isa = PBXGroup;
 			children = (
 				BDFD1B6F1D034699008C0372 /* AppDelegate.swift */,
-				BDFD1B711D034699008C0372 /* ViewController.swift */,
+				BDFD1B711D034699008C0372 /* StartViewController.swift */,
 				BDFD1B731D034699008C0372 /* Main.storyboard */,
+				BDFD1B831D034C00008C0372 /* PasscodeViewController.swift */,
+				BDFD1B851D034C09008C0372 /* DangerViewController.swift */,
+				BDFD1B811D034A96008C0372 /* PassiveViewController.swift */,
 				BDFD1B761D034699008C0372 /* Assets.xcassets */,
 				BDFD1B781D034699008C0372 /* LaunchScreen.storyboard */,
 				BDFD1B7B1D034699008C0372 /* Info.plist */,
@@ -96,6 +105,7 @@
 				TargetAttributes = {
 					BDFD1B6B1D034699008C0372 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 27RHNLCLG4;
 					};
 				};
 			};
@@ -135,7 +145,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BDFD1B721D034699008C0372 /* ViewController.swift in Sources */,
+				BDFD1B841D034C00008C0372 /* PasscodeViewController.swift in Sources */,
+				BDFD1B721D034699008C0372 /* StartViewController.swift in Sources */,
+				BDFD1B821D034A96008C0372 /* PassiveViewController.swift in Sources */,
+				BDFD1B861D034C09008C0372 /* DangerViewController.swift in Sources */,
 				BDFD1B701D034699008C0372 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -249,10 +262,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = FriendTracker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = company.FriendTracker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -260,10 +276,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = FriendTracker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = company.FriendTracker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
