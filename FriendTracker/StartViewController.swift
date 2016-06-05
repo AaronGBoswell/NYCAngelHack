@@ -17,7 +17,11 @@ class StartViewController: UIViewController {
         data.userId = "a"
         data.stat = "Safe"
         client.updateStatePut(data)
+        self.navigationController?.navigationBarHidden = true
         // Do any additional setup after loading the view, typically from a nib.
+    }
+    override func viewWillAppear(animated: Bool) {
+        self.navigationController?.navigationBarHidden = true
     }
 
     override func didReceiveMemoryWarning() {

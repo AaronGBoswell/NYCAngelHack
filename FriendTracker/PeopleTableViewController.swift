@@ -9,12 +9,38 @@
 import UIKit
 
 class PeopleTableViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
+    @IBOutlet weak var tableView: UITableView!
 
+    var status = "Safe"
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        reloadUI()
+        self.navigationController?.navigationBarHidden = false
     }
+    
+    func reloadUI(){
+        let client = FTFriendtrackerClient.defaultClient()
+        client.getStateGet().continueWithBlock{ (task:AWSTask) -> AnyObject? in
+            if let e = task.error{
+                print(e)
+            }else{
+                if let str = task.result as? String {
+                    dispatch_async(dispatch_get_main_queue(), {self.status = str
+                    self.tableView.reloadData()})
+                }
+            }
+            return nil
+        }
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 1000*1000*1000), dispatch_get_main_queue(), {self.reloadUI()})
+        
+    }
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        if status != "Safe"{
+            performSegueWithIdentifier("showMap", sender: self)
+        }
+    }
+    
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -25,8 +51,18 @@ class PeopleTableViewController: UIViewController,UITableViewDelegate,UITableVie
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        let cell = tableView.dequeueReusableCellWithIdentifier("peopleCell", forIndexPath: indexPath)
+        cell.textLabel!.text = "Angela"
+        cell.detailTextLabel!.text = status
+        if status == "Safe"{
+            cell.selectionStyle = UITableViewCellSelectionStyle.None
+        }else{
+            cell.selectionStyle = UITableViewCellSelectionStyle.Blue
+        }
+        return cell
+
     }
+    
     /*
     // MARK: - Navigation
 

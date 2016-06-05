@@ -32,7 +32,7 @@
                                 <rect key="frame" x="533" y="550" width="47" height="30"/>
                                 <state key="normal" title="People"/>
                                 <connections>
-                                    <segue destination="eZg-P7-zq4" kind="show" id="Azr-if-xfu"/>
+                                    <segue destination="JXr-QH-ZWa" kind="show" id="hkY-Ll-bGb"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -44,13 +44,14 @@
                             <constraint firstAttribute="trailingMargin" secondItem="bDA-fb-pgt" secondAttribute="trailing" id="UoK-Xi-as2"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="eUL-fC-z7s"/>
                     <connections>
                         <segue destination="ukJ-gb-BLa" kind="show" identifier="unsafeSegue" id="sGX-CN-Ds9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="440" y="236"/>
+            <point key="canvasLocation" x="1252" y="236"/>
         </scene>
         <!--People Table View Controller-->
         <scene sceneID="B6H-JW-emY">
@@ -69,7 +70,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="peopleCell" textLabel="OXM-dS-7d0" detailTextLabel="FjQ-c5-fjt" style="IBUITableViewCellStyleSubtitle" id="zmH-Pd-Y8d">
-                                        <rect key="frame" x="0.0" y="92" width="560" height="44"/>
+                                        <rect key="frame" x="0.0" y="28" width="560" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zmH-Pd-Y8d" id="dOd-g2-ysM">
                                             <rect key="frame" x="0.0" y="0.0" width="560" height="43.5"/>
@@ -108,13 +109,13 @@
                     </view>
                     <navigationItem key="navigationItem" id="Zyj-Vy-M9U"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="show" id="E9j-ex-udj"/>
+                        <outlet property="tableView" destination="rr1-6f-Wy7" id="1WJ-Bf-2bd"/>
                         <segue destination="jia-uq-zja" kind="show" identifier="showMap" id="u9v-W3-mAr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nvR-lq-VOG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="440" y="938"/>
+            <point key="canvasLocation" x="1174" y="948"/>
         </scene>
         <!--Map View Controller-->
         <scene sceneID="OJg-Kv-HSQ">
@@ -138,10 +139,10 @@
                                 <rect key="frame" x="20" y="-9" width="74" height="104"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Angela is safe." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qt1-pV-wCc">
-                                <rect key="frame" x="127" y="102" width="347" height="38.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading Angela's location..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qt1-pV-wCc">
+                                <rect key="frame" x="100" y="102" width="400" height="39"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="347" id="NrO-zH-91F"/>
+                                    <constraint firstAttribute="width" constant="400" id="NrO-zH-91F"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -433,13 +434,13 @@
                     <connections>
                         <outlet property="explainLabel" destination="4lm-Gl-43u" id="JqW-Nd-eKi"/>
                         <outlet property="messageLabel" destination="c91-B4-rud" id="Rr3-lV-Vlc"/>
-                        <segue destination="BYZ-38-t0r" kind="show" identifier="passcodeToStart" id="6D2-Sw-hIz"/>
+                        <segue destination="6yr-FK-PPW" kind="show" identifier="passcodeToStart" id="6D2-Sw-hIz"/>
                         <segue destination="ukJ-gb-BLa" kind="show" identifier="passcodeToUnsafe" id="h7a-KF-hwV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Qo-9k-2VE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2043" y="-215"/>
+            <point key="canvasLocation" x="2855" y="-215"/>
         </scene>
         <!--Passive View Controller-->
         <scene sceneID="VAB-Md-CMJ">
@@ -524,7 +525,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yZf-F2-47a" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1972" y="428"/>
+            <point key="canvasLocation" x="2784" y="428"/>
         </scene>
         <!--Danger View Controller-->
         <scene sceneID="jCx-DW-p3A">
@@ -585,31 +586,30 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CNo-pH-b6R" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2855" y="610"/>
+            <point key="canvasLocation" x="3667" y="610"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="gQw-2P-eWP">
+        <scene sceneID="e1h-VO-XAW">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="eZg-P7-zq4" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="6yr-FK-PPW" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="jwq-w8-2BX">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="KRV-Qa-JKd">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="JXr-QH-ZWa" kind="relationship" relationship="rootViewController" id="Jre-Of-aBj"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="ezx-HQ-DUK"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Rev-yR-bnf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iry-jD-Exs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-538" y="938"/>
+            <point key="canvasLocation" x="440" y="236"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="sGX-CN-Ds9"/>
-        <segue reference="E9j-ex-udj"/>
-        <segue reference="Keg-k1-VHG"/>
         <segue reference="zPK-dj-G7V"/>
+        <segue reference="Keg-k1-VHG"/>
     </inferredMetricsTieBreakers>
 </document>
