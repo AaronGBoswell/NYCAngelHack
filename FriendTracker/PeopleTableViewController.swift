@@ -1,41 +1,32 @@
 //
-//  DangerViewController.swift
+//  PeopleTableViewController.swift
 //  FriendTracker
 //
-//  Created by Aaron Boswell on 6/4/16.
+//  Created by Aaron Boswell on 6/5/16.
 //  Copyright © 2016 Aaron Boswell. All rights reserved.
 //
 
 import UIKit
 
-class DangerViewController: UIViewController {
-    
-    @IBOutlet weak var messageLabel: UILabel!
+class PeopleTableViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
 
-    var reason = "time"
     override func viewDidLoad() {
         super.viewDidLoad()
-        if reason != "time"{
-            messageLabel.text = "Your emergency contact has been notified of your danger"
-        }
-        let client = FTFriendtrackerClient.defaultClient()
-        let data = FTUserUpdateModel()
-        data.userId = "a"
-        data.stat = "Danger"
-        client.updateStatePut(data)
 
-        
+        // Do any additional setup after loading the view.
     }
 
-    @IBAction func call911(sender: AnyObject) {
-        UIApplication.sharedApplication().openURL(NSURL(string: "tel://411")!)
-    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
     
-
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        return UITableViewCell()
+    }
     /*
     // MARK: - Navigation
 
