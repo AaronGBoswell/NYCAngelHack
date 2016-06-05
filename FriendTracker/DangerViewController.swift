@@ -16,7 +16,7 @@ class DangerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         if reason != "time"{
-            messageLabel.text = "Your emergency contact has been notified of your dagner"
+            messageLabel.text = "Your emergency contact has been notified of your danger"
         }
 
         // Do any additional setup after loading the view.

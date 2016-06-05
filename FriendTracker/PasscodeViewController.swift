@@ -57,14 +57,17 @@ class PasscodeViewController: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if let dvc = segue.destinationViewController as? DangerViewController{
+            if let button = sender as? UIButton{
+                if let text = button.titleLabel?.text{
+                    if text == "I am in danger"{
+                        dvc.reason = "danger"
+                    }
+                    
+                }
+            }
+        }
     }
-    */
 
 }

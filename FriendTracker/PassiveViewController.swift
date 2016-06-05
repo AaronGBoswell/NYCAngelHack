@@ -36,7 +36,7 @@ class PassiveViewController: UIViewController {
     }
     func refreshUI(){
         let seconds = Int(expiryDate.timeIntervalSinceNow)
-        respondLabel.text = "Please respond:\(seconds/60):\(seconds%60)"
+        respondLabel.text = "Please respond in \(seconds/60):\(seconds%60)"
         
         if seconds < 1{
             performSegueWithIdentifier("passiveToDanger", sender: self)
