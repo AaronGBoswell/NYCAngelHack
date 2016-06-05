@@ -47,7 +47,7 @@ class PassiveViewController: UIViewController {
         if seconds < 1{
             performSegueWithIdentifier("passiveToDanger", sender: self)
         }else{
-            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 500), dispatch_get_main_queue(), {self.refreshUI()})
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 1000*1000), dispatch_get_main_queue(), {self.refreshUI()})
         }
     }
     override func didReceiveMemoryWarning() {
