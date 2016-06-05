@@ -41,6 +41,18 @@ class MapViewController: UIViewController,MKMapViewDelegate {
     func spotTapped(gestureRecognizer:UITapGestureRecognizer){
         print("Tapped")
         addPinAtLocation(mapView.userLocation.coordinate)
+        let client = FTFriendtrackerClient.defaultClient()
+        client.getLocationGet().continueWithBlock { (task:AWSTask) -> AnyObject? in
+            if let e = task.error{
+                print(e)
+            }else{
+                if let arr = task.result as? [String] {
+                    let loc = CLLocationCoordinate2D.init(latitude: Double(arr[0])!, longitude: Double(arr[1])!)
+                    dispatch_async(dispatch_get_main_queue(), {self.addPinAtLocation(loc)})
+                }
+            }
+            return nil
+        }
     
     }
     override func didReceiveMemoryWarning() {

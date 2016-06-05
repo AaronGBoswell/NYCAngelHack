@@ -89,6 +89,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
             if abs(howRecent) < 15.0{
                 print(location.coordinate.latitude)
                 print(location.coordinate.longitude)
+                let client = FTFriendtrackerClient.defaultClient()
+                let locInfo = FTUpdateLocationModel_info()
+                locInfo.lat = "\(location.coordinate.latitude)"
+                locInfo.lon = "\(location.coordinate.longitude)"
+
+                let locModel = FTUpdateLocationModel()
+                locModel.userId = "a"
+                locModel.info = locInfo
+                client.updateLocationPut(locModel).continueWithBlock { (task:AWSTask) -> AnyObject? in
+                    if let e = task.error{
+                        print(e)
+                    }else{
+                        //print(task.result! as! String)
+                    }
+                    return nil
+                }
                 //TODO update Location
             }
         }
@@ -129,7 +145,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
         completionHandler()
     }
     func application(application: UIApplication, willFinishLaunchingWithOptions launchOptions: [NSObject : AnyObject]?) -> Bool {
-        if let notification = launchOptions?[UIApplicationLaunchOptionsLocalNotificationKey] as? UILocalNotification{
+        if (launchOptions?[UIApplicationLaunchOptionsLocalNotificationKey] as? UILocalNotification) != nil{
             print("here")
         }
         UIApplication.sharedApplication().applicationIconBadgeNumber = -1
