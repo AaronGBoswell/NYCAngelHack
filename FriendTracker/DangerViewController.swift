@@ -9,9 +9,15 @@
 import UIKit
 
 class DangerViewController: UIViewController {
+    
+    @IBOutlet weak var messageLabel: UILabel!
 
+    var reason = "time"
     override func viewDidLoad() {
         super.viewDidLoad()
+        if reason != time{
+            messageLabel.text = "Your emergency contact has been notified of your dagner"
+        }
 
         // Do any additional setup after loading the view.
     }

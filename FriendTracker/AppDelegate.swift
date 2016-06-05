@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
     var topView:UIViewController{
         get{
             var topView:UIViewController! = UIApplication.sharedApplication().keyWindow?.rootViewController
-            if let view = topView?.presentedViewController{
+            while let view = topView?.presentedViewController{
                 topView = view
             }
             return topView
@@ -63,6 +63,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
         // Override point for customization after application launch.
         return true
     }
+    
+    func application(application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData) {
+        print(deviceToken)
+    }
     func setupLocation(){
         print(CLLocationManager.authorizationStatus())
         print(CLLocationManager.locationServicesEnabled())
@@ -106,13 +110,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
                 
                 UIApplication.sharedApplication().scheduleLocalNotification(notification)
                 
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                let vc = storyboard.instantiateViewControllerWithIdentifier("DangerViewController") as! DangerViewController
+                vc.reason = "danger"
+                topView.presentViewController(vc, animated: true, completion: nil)
+                
+                
                 
             } else if ident == "noAction" {
-                //topView.presentViewController(PasscodeViewController(), animated: true, completion: nil)
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                let vc = storyboard.instantiateViewControllerWithIdentifier("PasscodeViewController") as! PasscodeViewController
+                vc.attemptedState = "Unsafe"
+                topView.presentViewController(vc, animated: true, completion: nil)
 
                 //TODO go to passcode with Unsafe
             }
         }
+        completionHandler()
     }
     func application(application: UIApplication, willFinishLaunchingWithOptions launchOptions: [NSObject : AnyObject]?) -> Bool {
         if let notification = launchOptions?[UIApplicationLaunchOptionsLocalNotificationKey] as? UILocalNotification{

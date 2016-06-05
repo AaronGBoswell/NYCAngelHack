@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ybl-Zf-kRv">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -42,7 +42,7 @@
         <!--Passcode View Controller-->
         <scene sceneID="F6q-VW-UpR">
             <objects>
-                <viewController id="ybl-Zf-kRv" customClass="PasscodeViewController" customModule="FriendTracker" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PasscodeViewController" id="ybl-Zf-kRv" customClass="PasscodeViewController" customModule="FriendTracker" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Fq1-VA-ZSl"/>
                         <viewControllerLayoutGuide type="bottom" id="p8N-w1-ESd"/>
@@ -343,7 +343,7 @@
         <!--Danger View Controller-->
         <scene sceneID="jCx-DW-p3A">
             <objects>
-                <viewController id="y10-E0-RI8" customClass="DangerViewController" customModule="FriendTracker" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DangerViewController" id="y10-E0-RI8" customClass="DangerViewController" customModule="FriendTracker" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="siY-eM-G6X"/>
                         <viewControllerLayoutGuide type="bottom" id="WIt-hf-jcp"/>
@@ -378,6 +378,9 @@
                             <constraint firstItem="d2F-fn-QKs" firstAttribute="top" secondItem="siY-eM-G6X" secondAttribute="bottom" constant="8" id="o4g-hu-Xp0"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="messageLabel" destination="d2F-fn-QKs" id="y1F-OC-6r0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CNo-pH-b6R" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -385,8 +388,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Keg-k1-VHG"/>
-        <segue reference="zPK-dj-G7V"/>
+        <segue reference="6e8-gm-wwL"/>
         <segue reference="h7a-KF-hwV"/>
+        <segue reference="zPK-dj-G7V"/>
     </inferredMetricsTieBreakers>
 </document>
