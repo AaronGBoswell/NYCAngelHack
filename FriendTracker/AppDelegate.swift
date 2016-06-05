@@ -7,13 +7,25 @@
 //
 
 import UIKit
+import CoreLocation
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate {
 
     var window: UIWindow?
+    var locationManager:CLLocationManager! = nil
 
-
+    var topView:UIViewController{
+        get{
+            var topView:UIViewController! = UIApplication.sharedApplication().keyWindow?.rootViewController
+            if let view = topView?.presentedViewController{
+                topView = view
+            }
+            return topView
+        }
+    }
+    
+    
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
         let yesAction = UIMutableUserNotificationAction()
@@ -25,7 +37,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let noAction = UIMutableUserNotificationAction()
         noAction.identifier = "noAction"
-        noAction.title = "no"
+        noAction.title = "No"
         noAction.activationMode = UIUserNotificationActivationMode.Foreground
         noAction.destructive = false
         noAction.authenticationRequired = false
@@ -39,12 +51,76 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         var type = UIUserNotificationType.Alert
         type = type.union(UIUserNotificationType.Badge)
         type = type.union(UIUserNotificationType.Sound)
+        type = type.union(UIUserNotificationType.Alert)
         let settings = UIUserNotificationSettings(forTypes: type, categories: [category])
         
         
         UIApplication.sharedApplication().registerUserNotificationSettings(settings)
+        UIApplication.sharedApplication().registerForRemoteNotifications()
+        
+        setupLocation()
         print("setup done")
         // Override point for customization after application launch.
+        return true
+    }
+    func setupLocation(){
+        print(CLLocationManager.authorizationStatus())
+        print(CLLocationManager.locationServicesEnabled())
+        if locationManager == nil{
+            locationManager = CLLocationManager()
+            
+        }
+        locationManager.requestAlwaysAuthorization()
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.distanceFilter = 200
+        locationManager.startUpdatingLocation()
+    }
+    
+    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        print("location update")
+        if let location = locations.last{
+            let date = location.timestamp
+            let howRecent = date.timeIntervalSinceNow
+            if abs(howRecent) < 15.0{
+                print(location.coordinate.latitude)
+                print(location.coordinate.longitude)
+                //TODO update Location
+            }
+        }
+        
+    }
+    func application(application: UIApplication, handleActionWithIdentifier identifier: String?, forLocalNotification notification: UILocalNotification, completionHandler: () -> Void) {
+        if let ident = identifier{
+            if ident == "yesAction" {
+                //Send Danger Status
+                
+                let notification = UILocalNotification()
+                notification.alertAction = "Thanks"
+                notification.alertTitle = "We have alerted your Emergency Contatct"
+                notification.alertBody = "We have alerted your Emergency Contatct"
+                notification.fireDate = NSDate()
+                notification.timeZone = NSTimeZone.defaultTimeZone()
+                notification.soundName = UILocalNotificationDefaultSoundName
+                notification.applicationIconBadgeNumber = 1
+                
+                UIApplication.sharedApplication().scheduleLocalNotification(notification)
+                
+                
+            } else if ident == "noAction" {
+                //topView.presentViewController(PasscodeViewController(), animated: true, completion: nil)
+
+                //TODO go to passcode with Unsafe
+            }
+        }
+    }
+    func application(application: UIApplication, willFinishLaunchingWithOptions launchOptions: [NSObject : AnyObject]?) -> Bool {
+        if let notification = launchOptions?[UIApplicationLaunchOptionsLocalNotificationKey] as? UILocalNotification{
+            print("here")
+        }
+        UIApplication.sharedApplication().applicationIconBadgeNumber = -1
+        application.applicationIconBadgeNumber = -1
+
         return true
     }
 
@@ -69,6 +145,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
+    
+    
+
 
 
 }

@@ -145,15 +145,6 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please enter your passcode to confirm your saftey." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4lm-Gl-43u">
-                                <rect key="frame" x="106" y="57" width="387" height="67"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="67" id="mkD-74-GOd"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eca-fw-qo4">
                                 <rect key="frame" x="251" y="474" width="98" height="48"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
@@ -164,6 +155,16 @@
                                     <segue destination="y10-E0-RI8" kind="show" id="Keg-k1-VHG"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please enter your passcode to confirm your saftey." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4lm-Gl-43u">
+                                <rect key="frame" x="148" y="57" width="305" height="109"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="109" id="mjF-g1-CU2"/>
+                                    <constraint firstAttribute="width" constant="305" id="zcc-qV-Pmt"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -218,6 +219,7 @@
                             <constraint firstItem="AWx-aK-5nl" firstAttribute="leading" secondItem="bqE-iO-lSu" secondAttribute="trailing" constant="8" id="nta-Uc-IHL"/>
                             <constraint firstItem="qYA-Nr-HVa" firstAttribute="top" secondItem="Fq1-VA-ZSl" secondAttribute="bottom" constant="8" id="nwl-Rp-maz"/>
                             <constraint firstItem="u2w-CK-JGz" firstAttribute="top" secondItem="fGk-UV-QZa" secondAttribute="bottom" constant="8" id="oa0-BL-Yjx"/>
+                            <constraint firstItem="4lm-Gl-43u" firstAttribute="centerX" secondItem="cSr-9v-4hb" secondAttribute="centerX" id="q0J-xk-JXu"/>
                             <constraint firstItem="wrp-7l-Eq9" firstAttribute="leading" secondItem="AWx-aK-5nl" secondAttribute="trailing" constant="8" id="rna-Qk-nhc"/>
                             <constraint firstItem="DR0-BU-hm2" firstAttribute="top" secondItem="AWx-aK-5nl" secondAttribute="bottom" constant="8" id="s9Q-hV-B5F"/>
                             <constraint firstItem="ij9-fM-7h1" firstAttribute="leading" secondItem="cSr-9v-4hb" secondAttribute="leadingMargin" constant="8" id="tEv-QR-gD5"/>
@@ -357,7 +359,7 @@
                                     <segue destination="ybl-Zf-kRv" kind="show" id="zPK-dj-G7V"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your emergency contact has been notified of your danger." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d2F-fn-QKs">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You took to long to respond.  Your emergency contact has been notified of your danger." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d2F-fn-QKs">
                                 <rect key="frame" x="151" y="28" width="298" height="168"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="168" id="KY9-aG-Q8f"/>
@@ -383,8 +385,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="6e8-gm-wwL"/>
+        <segue reference="Keg-k1-VHG"/>
+        <segue reference="zPK-dj-G7V"/>
         <segue reference="h7a-KF-hwV"/>
-        <segue reference="sZU-hc-czK"/>
     </inferredMetricsTieBreakers>
 </document>

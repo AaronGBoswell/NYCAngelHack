@@ -11,16 +11,18 @@ import UIKit
 class PassiveViewController: UIViewController {
     
     var expiryDate:NSDate! = nil
+    let expiryTime = 1
 
     @IBOutlet weak var respondLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-        expiryDate = NSDate().dateByAddingTimeInterval(60*1)
-        refreshUI()
+        expiryDate = NSDate().dateByAddingTimeInterval(Double(60 * expiryTime))
         let notification = UILocalNotification()
         notification.category = "category"
-        notification.alertAction = "Are you in immediate danger?"
-        notification.fireDate = expiryDate
+        //notification.alertAction = "Are you in immediate danger?"
+        notification.alertTitle = "Are you in immediate danger?"
+        notification.alertBody = "Are you in immediate danger?"
+        notification.fireDate = expiryDate.dateByAddingTimeInterval(-30)
         notification.timeZone = NSTimeZone.defaultTimeZone()
         notification.soundName = UILocalNotificationDefaultSoundName
         notification.applicationIconBadgeNumber = 1
@@ -29,14 +31,17 @@ class PassiveViewController: UIViewController {
         
         // Do any additional setup after loading the view.
     }
-
+    override func viewDidAppear(animated: Bool) {
+        refreshUI()
+    }
     func refreshUI(){
         let seconds = Int(expiryDate.timeIntervalSinceNow)
         respondLabel.text = "Please respond:\(seconds/60):\(seconds%60)"
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 500), dispatch_get_main_queue(), {self.refreshUI()})
         
         if seconds < 1{
             performSegueWithIdentifier("passiveToDanger", sender: self)
+        }else{
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 500), dispatch_get_main_queue(), {self.refreshUI()})
         }
     }
     override func didReceiveMemoryWarning() {

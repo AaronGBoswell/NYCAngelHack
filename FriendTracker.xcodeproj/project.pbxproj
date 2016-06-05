@@ -15,6 +15,7 @@
 		BDFD1B821D034A96008C0372 /* PassiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFD1B811D034A96008C0372 /* PassiveViewController.swift */; };
 		BDFD1B841D034C00008C0372 /* PasscodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFD1B831D034C00008C0372 /* PasscodeViewController.swift */; };
 		BDFD1B861D034C09008C0372 /* DangerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFD1B851D034C09008C0372 /* DangerViewController.swift */; };
+		BDFD1B881D039F2B008C0372 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDFD1B871D039F2B008C0372 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		BDFD1B811D034A96008C0372 /* PassiveViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PassiveViewController.swift; sourceTree = "<group>"; };
 		BDFD1B831D034C00008C0372 /* PasscodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasscodeViewController.swift; sourceTree = "<group>"; };
 		BDFD1B851D034C09008C0372 /* DangerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DangerViewController.swift; sourceTree = "<group>"; };
+		BDFD1B871D039F2B008C0372 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDFD1B881D039F2B008C0372 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +47,7 @@
 		BDFD1B631D034699008C0372 = {
 			isa = PBXGroup;
 			children = (
+				BDFD1B871D039F2B008C0372 /* CoreLocation.framework */,
 				BDFD1B6E1D034699008C0372 /* FriendTracker */,
 				BDFD1B6D1D034699008C0372 /* Products */,
 			);
