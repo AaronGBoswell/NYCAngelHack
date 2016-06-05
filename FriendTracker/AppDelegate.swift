@@ -130,6 +130,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
                 let vc = storyboard.instantiateViewControllerWithIdentifier("DangerViewController") as! DangerViewController
                 vc.reason = "danger"
                 topView.presentViewController(vc, animated: true, completion: nil)
+                let client = FTFriendtrackerClient.defaultClient()
+                let data = FTUserUpdateModel()
+                data.userId = "a"
+                data.stat = "Danger"
+                client.updateStatePut(data)
                 
                 
                 
@@ -139,6 +144,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
                 vc.attemptedState = "Unsafe"
                 topView.presentViewController(vc, animated: true, completion: nil)
 
+                
                 //TODO go to passcode with Unsafe
             }
         }
