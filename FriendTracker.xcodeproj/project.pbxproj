@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BD392FCB1D03BD7F005ABBAB /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD392FCA1D03BD7F005ABBAB /* MapViewController.swift */; };
+		BD392FCD1D03BDE4005ABBAB /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD392FCC1D03BDE4005ABBAB /* MapKit.framework */; };
 		BDFD1B701D034699008C0372 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFD1B6F1D034699008C0372 /* AppDelegate.swift */; };
 		BDFD1B721D034699008C0372 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFD1B711D034699008C0372 /* StartViewController.swift */; };
 		BDFD1B751D034699008C0372 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDFD1B731D034699008C0372 /* Main.storyboard */; };
@@ -19,6 +21,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BD392FCA1D03BD7F005ABBAB /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		BD392FCC1D03BDE4005ABBAB /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		BD392FE01D03D7D6005ABBAB /* FriendTracker-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FriendTracker-Bridging-Header.h"; sourceTree = "<group>"; };
 		BDFD1B6C1D034699008C0372 /* FriendTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FriendTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDFD1B6F1D034699008C0372 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BDFD1B711D034699008C0372 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
@@ -37,6 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD392FCD1D03BDE4005ABBAB /* MapKit.framework in Frameworks */,
 				BDFD1B881D039F2B008C0372 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -47,6 +53,7 @@
 		BDFD1B631D034699008C0372 = {
 			isa = PBXGroup;
 			children = (
+				BD392FCC1D03BDE4005ABBAB /* MapKit.framework */,
 				BDFD1B871D039F2B008C0372 /* CoreLocation.framework */,
 				BDFD1B6E1D034699008C0372 /* FriendTracker */,
 				BDFD1B6D1D034699008C0372 /* Products */,
@@ -67,12 +74,14 @@
 				BDFD1B6F1D034699008C0372 /* AppDelegate.swift */,
 				BDFD1B711D034699008C0372 /* StartViewController.swift */,
 				BDFD1B731D034699008C0372 /* Main.storyboard */,
+				BD392FCA1D03BD7F005ABBAB /* MapViewController.swift */,
 				BDFD1B831D034C00008C0372 /* PasscodeViewController.swift */,
 				BDFD1B851D034C09008C0372 /* DangerViewController.swift */,
 				BDFD1B811D034A96008C0372 /* PassiveViewController.swift */,
 				BDFD1B761D034699008C0372 /* Assets.xcassets */,
 				BDFD1B781D034699008C0372 /* LaunchScreen.storyboard */,
 				BDFD1B7B1D034699008C0372 /* Info.plist */,
+				BD392FE01D03D7D6005ABBAB /* FriendTracker-Bridging-Header.h */,
 			);
 			path = FriendTracker;
 			sourceTree = "<group>";
@@ -155,6 +164,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BDFD1B841D034C00008C0372 /* PasscodeViewController.swift in Sources */,
+				BD392FCB1D03BD7F005ABBAB /* MapViewController.swift in Sources */,
 				BDFD1B721D034699008C0372 /* StartViewController.swift in Sources */,
 				BDFD1B821D034A96008C0372 /* PassiveViewController.swift in Sources */,
 				BDFD1B861D034C09008C0372 /* DangerViewController.swift in Sources */,
@@ -271,6 +281,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = FriendTracker/Info.plist;
@@ -278,6 +289,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.aaronandangela.friendtracker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "FriendTracker/FriendTracker-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -285,6 +298,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = FriendTracker/Info.plist;
@@ -292,6 +306,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.aaronandangela.friendtracker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "FriendTracker/FriendTracker-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -314,6 +329,7 @@
 				BDFD1B801D034699008C0372 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

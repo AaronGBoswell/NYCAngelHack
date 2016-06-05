@@ -73,6 +73,15 @@ class PassiveViewController: UIViewController {
 
                 }
             }
+        }else if let dvc = segue.destinationViewController as? DangerViewController{
+            if let button = sender as? UIButton{
+                if let text = button.titleLabel?.text{
+                    if text == "I am in danger"{
+                        dvc.reason = "danger"
+                    }
+                    
+                }
+            }
         }
     }
    

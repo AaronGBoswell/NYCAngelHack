@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="jia-uq-zja">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -38,6 +38,46 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+        </scene>
+        <!--Map View Controller-->
+        <scene sceneID="OJg-Kv-HSQ">
+            <objects>
+                <viewController id="jia-uq-zja" customClass="MapViewController" customModule="FriendTracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Dll-v9-SoB"/>
+                        <viewControllerLayoutGuide type="bottom" id="ugO-Vc-O81"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="A9R-eh-jgU">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="MGU-ma-ZFw">
+                                <rect key="frame" x="20" y="103" width="560" height="477"/>
+                                <connections>
+                                    <outlet property="delegate" destination="jia-uq-zja" id="d9z-uV-FbM"/>
+                                </connections>
+                            </mapView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dLW-OI-3Yf">
+                                <rect key="frame" x="20" y="-9" width="426" height="104"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="MGU-ma-ZFw" secondAttribute="trailing" id="Sjj-vY-isb"/>
+                            <constraint firstItem="MGU-ma-ZFw" firstAttribute="top" secondItem="Dll-v9-SoB" secondAttribute="bottom" constant="83" id="coZ-ct-L6i"/>
+                            <constraint firstItem="ugO-Vc-O81" firstAttribute="top" secondItem="MGU-ma-ZFw" secondAttribute="bottom" constant="20" id="hle-jk-lHQ"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="MGU-ma-ZFw" secondAttribute="leading" id="yHB-Gw-qTh"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="MGU-ma-ZFw" id="Lpb-UO-Yi5"/>
+                        <outlet property="touchView" destination="dLW-OI-3Yf" id="B4s-Rb-vrg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="foK-Ee-8XM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="426" y="1076"/>
         </scene>
         <!--Passcode View Controller-->
         <scene sceneID="F6q-VW-UpR">
