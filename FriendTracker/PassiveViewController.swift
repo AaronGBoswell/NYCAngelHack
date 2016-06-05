@@ -50,7 +50,7 @@ class PassiveViewController: UIViewController {
     }
     
     @IBAction func inDanger(sender: AnyObject) {
-        performSegueWithIdentifier("passiveToDanger", sender: self)
+        performSegueWithIdentifier("passiveToDanger", sender: sender)
         //TODO notify emergency contact
         //go to danger VC
     }
