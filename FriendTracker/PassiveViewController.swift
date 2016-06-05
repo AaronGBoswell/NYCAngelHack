@@ -7,8 +7,10 @@
 //
 
 import UIKit
+import Button
 
 class PassiveViewController: UIViewController {
+    @IBOutlet weak var uberButton: BTNDropinButton!
     
     var expiryDate:NSDate! = nil
     let expiryTime = 1
@@ -16,6 +18,13 @@ class PassiveViewController: UIViewController {
     @IBOutlet weak var respondLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
+        var location = BTNLocation(name: "Home", latitude: 40.734867, longitude: -74.053617)
+        var context = BTNContext(subjectLocation:location)
+        self.uberButton.prepareWithContext(context) { (isDisplayed:Bool) in
+            if (!isDisplayed) {
+                
+            }
+        }
         expiryDate = NSDate().dateByAddingTimeInterval(Double(60 * expiryTime))
         let notification = UILocalNotification()
         notification.category = "category"

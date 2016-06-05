@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreLocation
+import Button
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate {
@@ -57,6 +58,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
         
         UIApplication.sharedApplication().registerUserNotificationSettings(settings)
         UIApplication.sharedApplication().registerForRemoteNotifications()
+        Button.sharedButton().configureWithApplicationId("app-6abce33e28cf70b7") { (error:NSError!) in
+            if error != nil {
+                Button.sharedButton().setUserIdentifier("a")
+            }
+        }
+       
         
         setupLocation()
         print("setup done")
