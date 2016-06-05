@@ -25,7 +25,8 @@ class MapViewController: UIViewController,MKMapViewDelegate {
         let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(MapViewController.spotTapped(_:)))
         gestureRecognizer.numberOfTouchesRequired = 1
         touchView.addGestureRecognizer(gestureRecognizer)
-        
+        self.navigationController?.navigationBarHidden = false
+
         reloadUI()
 
        // var pin = MK
@@ -65,7 +66,13 @@ class MapViewController: UIViewController,MKMapViewDelegate {
                 print(e)
             }else{
                 if let str = task.result as? String {
-                    dispatch_async(dispatch_get_main_queue(), {self.messageLabel.text = "Angela is \(str.lowercaseString == "danger" ? "in danger" : str.lowercaseString)"})
+                    dispatch_async(dispatch_get_main_queue(), {
+                        self.messageLabel.text = "Angela is \(str.lowercaseString == "danger" ? "in danger" : str.lowercaseString)"
+                        if str == "Safe"{
+                            self.navigationController?.popViewControllerAnimated(true)
+                        }
+                    })
+                    
                 }
             }
             return nil
