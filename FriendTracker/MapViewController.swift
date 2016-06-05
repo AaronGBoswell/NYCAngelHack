@@ -26,23 +26,25 @@ class MapViewController: UIViewController,MKMapViewDelegate {
         gestureRecognizer.numberOfTouchesRequired = 1
         touchView.addGestureRecognizer(gestureRecognizer)
         
+        reloadUI()
+
        // var pin = MK
     }
 
     func addPinAtLocation(loc:CLLocationCoordinate2D){
-        if let note = annotation{
-            mapView.removeAnnotation(note)
-        }
+        let n = annotation
         
         annotation = MKPointAnnotation()
         annotation!.coordinate = loc
         annotation!.title = "Angela's Location"
         mapView.addAnnotation(annotation!)
+        if let note = n{
+            mapView.removeAnnotation(note)
+        }
     }
     func spotTapped(gestureRecognizer:UITapGestureRecognizer){
         print("Tapped")
         //addPinAtLocation(mapView.userLocation.coordinate)
-        reloadUI()
     
     }
     func reloadUI(){
@@ -63,11 +65,13 @@ class MapViewController: UIViewController,MKMapViewDelegate {
                 print(e)
             }else{
                 if let str = task.result as? String {
-                    dispatch_async(dispatch_get_main_queue(), {self.messageLabel.text = "Angela is \(str.lowercaseString)."})
+                    dispatch_async(dispatch_get_main_queue(), {self.messageLabel.text = "Angela is \(str.lowercaseString == "danger" ? "in danger" : str.lowercaseString)"})
                 }
             }
             return nil
         }
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 1000*1000*1000), dispatch_get_main_queue(), {self.reloadUI()})
+
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

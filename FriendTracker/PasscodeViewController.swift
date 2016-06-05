@@ -25,7 +25,10 @@ class PasscodeViewController: UIViewController {
         }
     }
     @IBAction func deleteDigit(sender: AnyObject) {
-        enteredPasscode.removeAtIndex(enteredPasscode.endIndex.predecessor())
+        if enteredPasscode.characters.count > 0{
+            enteredPasscode = String(enteredPasscode.characters.dropLast())
+            messageLabel.text = String(messageLabel.text!.characters.dropLast())
+        }
     }
     
     func passcodeEntered(){
