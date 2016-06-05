@@ -9,6 +9,19 @@
 /* Begin PBXBuildFile section */
 		BD392FCB1D03BD7F005ABBAB /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD392FCA1D03BD7F005ABBAB /* MapViewController.swift */; };
 		BD392FCD1D03BDE4005ABBAB /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD392FCC1D03BDE4005ABBAB /* MapKit.framework */; };
+		BD489C491D03DB7F007C4F3E /* AWSAPIGateway.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD489C471D03DB7F007C4F3E /* AWSAPIGateway.framework */; };
+		BD489C4A1D03DB7F007C4F3E /* AWSCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD489C481D03DB7F007C4F3E /* AWSCore.framework */; };
+		BD489C4C1D03DBC0007C4F3E /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = BD489C4B1D03DBC0007C4F3E /* libsqlite3.tbd */; };
+		BD489C4E1D03DBC8007C4F3E /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = BD489C4D1D03DBC8007C4F3E /* libz.tbd */; };
+		BD489C501D03DBD0007C4F3E /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD489C4F1D03DBD0007C4F3E /* SystemConfiguration.framework */; };
+		BD489C511D03DC0C007C4F3E /* AWSAPIGateway.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD489C471D03DB7F007C4F3E /* AWSAPIGateway.framework */; };
+		BD489C521D03DC0C007C4F3E /* AWSAPIGateway.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BD489C471D03DB7F007C4F3E /* AWSAPIGateway.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		BD489C541D03DC1D007C4F3E /* AWSCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD489C481D03DB7F007C4F3E /* AWSCore.framework */; };
+		BD489C551D03DC1D007C4F3E /* AWSCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BD489C481D03DB7F007C4F3E /* AWSCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		BDF00B5E1D03E853005A589A /* FTFriendtrackerClient.m in Sources */ = {isa = PBXBuildFile; fileRef = BDF00B571D03E853005A589A /* FTFriendtrackerClient.m */; };
+		BDF00B5F1D03E853005A589A /* FTUpdateLocationModel_info.m in Sources */ = {isa = PBXBuildFile; fileRef = BDF00B591D03E853005A589A /* FTUpdateLocationModel_info.m */; };
+		BDF00B601D03E853005A589A /* FTUpdateLocationModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BDF00B5B1D03E853005A589A /* FTUpdateLocationModel.m */; };
+		BDF00B611D03E853005A589A /* FTUserUpdateModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BDF00B5D1D03E853005A589A /* FTUserUpdateModel.m */; };
 		BDFD1B701D034699008C0372 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFD1B6F1D034699008C0372 /* AppDelegate.swift */; };
 		BDFD1B721D034699008C0372 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFD1B711D034699008C0372 /* StartViewController.swift */; };
 		BDFD1B751D034699008C0372 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDFD1B731D034699008C0372 /* Main.storyboard */; };
@@ -20,10 +33,38 @@
 		BDFD1B881D039F2B008C0372 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDFD1B871D039F2B008C0372 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		BD489C531D03DC0D007C4F3E /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				BD489C521D03DC0C007C4F3E /* AWSAPIGateway.framework in Embed Frameworks */,
+				BD489C551D03DC1D007C4F3E /* AWSCore.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		BD392FCA1D03BD7F005ABBAB /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		BD392FCC1D03BDE4005ABBAB /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		BD392FE01D03D7D6005ABBAB /* FriendTracker-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FriendTracker-Bridging-Header.h"; sourceTree = "<group>"; };
+		BD489C471D03DB7F007C4F3E /* AWSAPIGateway.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AWSAPIGateway.framework; sourceTree = "<group>"; };
+		BD489C481D03DB7F007C4F3E /* AWSCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AWSCore.framework; sourceTree = "<group>"; };
+		BD489C4B1D03DBC0007C4F3E /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		BD489C4D1D03DBC8007C4F3E /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		BD489C4F1D03DBD0007C4F3E /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		BDF00B561D03E853005A589A /* FTFriendtrackerClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FTFriendtrackerClient.h; path = "../../../Downloads/aws-apigateway-ios 5/generated-src/FTFriendtrackerClient.h"; sourceTree = "<group>"; };
+		BDF00B571D03E853005A589A /* FTFriendtrackerClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FTFriendtrackerClient.m; path = "../../../Downloads/aws-apigateway-ios 5/generated-src/FTFriendtrackerClient.m"; sourceTree = "<group>"; };
+		BDF00B581D03E853005A589A /* FTUpdateLocationModel_info.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FTUpdateLocationModel_info.h; path = "../../../Downloads/aws-apigateway-ios 5/generated-src/FTUpdateLocationModel_info.h"; sourceTree = "<group>"; };
+		BDF00B591D03E853005A589A /* FTUpdateLocationModel_info.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FTUpdateLocationModel_info.m; path = "../../../Downloads/aws-apigateway-ios 5/generated-src/FTUpdateLocationModel_info.m"; sourceTree = "<group>"; };
+		BDF00B5A1D03E853005A589A /* FTUpdateLocationModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FTUpdateLocationModel.h; path = "../../../Downloads/aws-apigateway-ios 5/generated-src/FTUpdateLocationModel.h"; sourceTree = "<group>"; };
+		BDF00B5B1D03E853005A589A /* FTUpdateLocationModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FTUpdateLocationModel.m; path = "../../../Downloads/aws-apigateway-ios 5/generated-src/FTUpdateLocationModel.m"; sourceTree = "<group>"; };
+		BDF00B5C1D03E853005A589A /* FTUserUpdateModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FTUserUpdateModel.h; path = "../../../Downloads/aws-apigateway-ios 5/generated-src/FTUserUpdateModel.h"; sourceTree = "<group>"; };
+		BDF00B5D1D03E853005A589A /* FTUserUpdateModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FTUserUpdateModel.m; path = "../../../Downloads/aws-apigateway-ios 5/generated-src/FTUserUpdateModel.m"; sourceTree = "<group>"; };
 		BDFD1B6C1D034699008C0372 /* FriendTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FriendTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDFD1B6F1D034699008C0372 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BDFD1B711D034699008C0372 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
@@ -42,8 +83,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD489C501D03DBD0007C4F3E /* SystemConfiguration.framework in Frameworks */,
+				BD489C4E1D03DBC8007C4F3E /* libz.tbd in Frameworks */,
+				BD489C511D03DC0C007C4F3E /* AWSAPIGateway.framework in Frameworks */,
+				BD489C4C1D03DBC0007C4F3E /* libsqlite3.tbd in Frameworks */,
+				BD489C491D03DB7F007C4F3E /* AWSAPIGateway.framework in Frameworks */,
+				BD489C4A1D03DB7F007C4F3E /* AWSCore.framework in Frameworks */,
 				BD392FCD1D03BDE4005ABBAB /* MapKit.framework in Frameworks */,
 				BDFD1B881D039F2B008C0372 /* CoreLocation.framework in Frameworks */,
+				BD489C541D03DC1D007C4F3E /* AWSCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,6 +101,11 @@
 		BDFD1B631D034699008C0372 = {
 			isa = PBXGroup;
 			children = (
+				BD489C4F1D03DBD0007C4F3E /* SystemConfiguration.framework */,
+				BD489C4D1D03DBC8007C4F3E /* libz.tbd */,
+				BD489C4B1D03DBC0007C4F3E /* libsqlite3.tbd */,
+				BD489C471D03DB7F007C4F3E /* AWSAPIGateway.framework */,
+				BD489C481D03DB7F007C4F3E /* AWSCore.framework */,
 				BD392FCC1D03BDE4005ABBAB /* MapKit.framework */,
 				BDFD1B871D039F2B008C0372 /* CoreLocation.framework */,
 				BDFD1B6E1D034699008C0372 /* FriendTracker */,
@@ -81,6 +134,14 @@
 				BDFD1B761D034699008C0372 /* Assets.xcassets */,
 				BDFD1B781D034699008C0372 /* LaunchScreen.storyboard */,
 				BDFD1B7B1D034699008C0372 /* Info.plist */,
+				BDF00B561D03E853005A589A /* FTFriendtrackerClient.h */,
+				BDF00B571D03E853005A589A /* FTFriendtrackerClient.m */,
+				BDF00B581D03E853005A589A /* FTUpdateLocationModel_info.h */,
+				BDF00B591D03E853005A589A /* FTUpdateLocationModel_info.m */,
+				BDF00B5A1D03E853005A589A /* FTUpdateLocationModel.h */,
+				BDF00B5B1D03E853005A589A /* FTUpdateLocationModel.m */,
+				BDF00B5C1D03E853005A589A /* FTUserUpdateModel.h */,
+				BDF00B5D1D03E853005A589A /* FTUserUpdateModel.m */,
 				BD392FE01D03D7D6005ABBAB /* FriendTracker-Bridging-Header.h */,
 			);
 			path = FriendTracker;
@@ -96,6 +157,7 @@
 				BDFD1B681D034699008C0372 /* Sources */,
 				BDFD1B691D034699008C0372 /* Frameworks */,
 				BDFD1B6A1D034699008C0372 /* Resources */,
+				BD489C531D03DC0D007C4F3E /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -163,11 +225,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDF00B5E1D03E853005A589A /* FTFriendtrackerClient.m in Sources */,
+				BDF00B5F1D03E853005A589A /* FTUpdateLocationModel_info.m in Sources */,
 				BDFD1B841D034C00008C0372 /* PasscodeViewController.swift in Sources */,
 				BD392FCB1D03BD7F005ABBAB /* MapViewController.swift in Sources */,
 				BDFD1B721D034699008C0372 /* StartViewController.swift in Sources */,
+				BDF00B611D03E853005A589A /* FTUserUpdateModel.m in Sources */,
 				BDFD1B821D034A96008C0372 /* PassiveViewController.swift in Sources */,
 				BDFD1B861D034C09008C0372 /* DangerViewController.swift in Sources */,
+				BDF00B601D03E853005A589A /* FTUpdateLocationModel.m in Sources */,
 				BDFD1B701D034699008C0372 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -284,6 +350,11 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEFINES_MODULE = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = FriendTracker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.aaronandangela.friendtracker;
@@ -301,6 +372,11 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEFINES_MODULE = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = FriendTracker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.aaronandangela.friendtracker;

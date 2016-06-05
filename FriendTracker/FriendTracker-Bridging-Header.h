@@ -9,5 +9,9 @@
 #ifndef FriendTracker_Bridging_Header_h
 #define FriendTracker_Bridging_Header_h
 
+#import "FTFriendtrackerClient.h"
+#import "FTUpdateLocationModel_info.h"
+#import "FTUpdateLocationModel.h"
+#import "FTUserUpdateModel.h"
 
 #endif /* FriendTracker_Bridging_Header_h */
