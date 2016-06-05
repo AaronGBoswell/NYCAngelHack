@@ -11,6 +11,7 @@ import MapKit
 
 class MapViewController: UIViewController,MKMapViewDelegate {
 
+    @IBOutlet weak var messageLabel: UILabel!
     @IBOutlet weak var touchView: UIView!
     @IBOutlet weak var mapView: MKMapView!
     
@@ -40,7 +41,11 @@ class MapViewController: UIViewController,MKMapViewDelegate {
     }
     func spotTapped(gestureRecognizer:UITapGestureRecognizer){
         print("Tapped")
-        addPinAtLocation(mapView.userLocation.coordinate)
+        //addPinAtLocation(mapView.userLocation.coordinate)
+        reloadUI()
+    
+    }
+    func reloadUI(){
         let client = FTFriendtrackerClient.defaultClient()
         client.getLocationGet().continueWithBlock { (task:AWSTask) -> AnyObject? in
             if let e = task.error{
@@ -53,7 +58,16 @@ class MapViewController: UIViewController,MKMapViewDelegate {
             }
             return nil
         }
-    
+        client.getStateGet().continueWithBlock{ (task:AWSTask) -> AnyObject? in
+            if let e = task.error{
+                print(e)
+            }else{
+                if let str = task.result as? String {
+                    dispatch_async(dispatch_get_main_queue(), {self.messageLabel.text = "Angela is \(str.lowercaseString)."})
+                }
+            }
+            return nil
+        }
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

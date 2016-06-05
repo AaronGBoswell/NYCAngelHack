@@ -18,6 +18,11 @@ class DangerViewController: UIViewController {
         if reason != "time"{
             messageLabel.text = "Your emergency contact has been notified of your danger"
         }
+        let client = FTFriendtrackerClient.defaultClient()
+        let data = FTUserUpdateModel()
+        data.userId = "a"
+        data.stat = "Danger"
+        client.updateStatePut(data)
 
         // Do any additional setup after loading the view.
     }

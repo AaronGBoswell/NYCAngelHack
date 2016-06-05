@@ -29,6 +29,12 @@ class PassiveViewController: UIViewController {
         
         UIApplication.sharedApplication().scheduleLocalNotification(notification)
         
+        
+        let client = FTFriendtrackerClient.defaultClient()
+        let data = FTUserUpdateModel()
+        data.userId = "a"
+        data.stat = "Unsafe"
+        client.updateStatePut(data)
         // Do any additional setup after loading the view.
     }
     override func viewDidAppear(animated: Bool) {

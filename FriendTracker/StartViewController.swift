@@ -12,6 +12,11 @@ class StartViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        let client = FTFriendtrackerClient.defaultClient()
+        let data = FTUserUpdateModel()
+        data.userId = "a"
+        data.stat = "Safe"
+        client.updateStatePut(data)
         // Do any additional setup after loading the view, typically from a nib.
     }
 
