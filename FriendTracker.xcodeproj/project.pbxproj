@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6EB3D77B1D03F80A0081C31B /* Button.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 6EB3D7791D03F80A0081C31B /* Button.bundle */; };
+		6EB3D77C1D03F80A0081C31B /* Button.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EB3D77A1D03F80A0081C31B /* Button.framework */; };
 		BD392FCB1D03BD7F005ABBAB /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD392FCA1D03BD7F005ABBAB /* MapViewController.swift */; };
 		BD392FCD1D03BDE4005ABBAB /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD392FCC1D03BDE4005ABBAB /* MapKit.framework */; };
 		BD489C491D03DB7F007C4F3E /* AWSAPIGateway.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD489C471D03DB7F007C4F3E /* AWSAPIGateway.framework */; };
@@ -49,6 +51,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		6EB3D7791D03F80A0081C31B /* Button.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Button.bundle; sourceTree = "<group>"; };
+		6EB3D77A1D03F80A0081C31B /* Button.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Button.framework; sourceTree = "<group>"; };
 		BD392FCA1D03BD7F005ABBAB /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		BD392FCC1D03BDE4005ABBAB /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		BD392FE01D03D7D6005ABBAB /* FriendTracker-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FriendTracker-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -85,6 +89,7 @@
 			files = (
 				BD489C501D03DBD0007C4F3E /* SystemConfiguration.framework in Frameworks */,
 				BD489C4E1D03DBC8007C4F3E /* libz.tbd in Frameworks */,
+				6EB3D77C1D03F80A0081C31B /* Button.framework in Frameworks */,
 				BD489C511D03DC0C007C4F3E /* AWSAPIGateway.framework in Frameworks */,
 				BD489C4C1D03DBC0007C4F3E /* libsqlite3.tbd in Frameworks */,
 				BD489C491D03DB7F007C4F3E /* AWSAPIGateway.framework in Frameworks */,
@@ -101,6 +106,8 @@
 		BDFD1B631D034699008C0372 = {
 			isa = PBXGroup;
 			children = (
+				6EB3D7791D03F80A0081C31B /* Button.bundle */,
+				6EB3D77A1D03F80A0081C31B /* Button.framework */,
 				BD489C4F1D03DBD0007C4F3E /* SystemConfiguration.framework */,
 				BD489C4D1D03DBC8007C4F3E /* libz.tbd */,
 				BD489C4B1D03DBC0007C4F3E /* libsqlite3.tbd */,
@@ -213,6 +220,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BDFD1B7A1D034699008C0372 /* LaunchScreen.storyboard in Resources */,
+				6EB3D77B1D03F80A0081C31B /* Button.bundle in Resources */,
 				BDFD1B771D034699008C0372 /* Assets.xcassets in Resources */,
 				BDFD1B751D034699008C0372 /* Main.storyboard in Resources */,
 			);
@@ -357,6 +365,7 @@
 				);
 				INFOPLIST_FILE = FriendTracker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.aaronandangela.friendtracker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -379,6 +388,7 @@
 				);
 				INFOPLIST_FILE = FriendTracker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.aaronandangela.friendtracker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
