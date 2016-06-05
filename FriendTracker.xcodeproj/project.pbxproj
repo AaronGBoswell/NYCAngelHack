@@ -20,6 +20,7 @@
 		BD489C521D03DC0C007C4F3E /* AWSAPIGateway.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BD489C471D03DB7F007C4F3E /* AWSAPIGateway.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BD489C541D03DC1D007C4F3E /* AWSCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD489C481D03DB7F007C4F3E /* AWSCore.framework */; };
 		BD489C551D03DC1D007C4F3E /* AWSCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BD489C481D03DB7F007C4F3E /* AWSCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		BD739C4E1D048482005FE8B2 /* PeopleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD739C4D1D048482005FE8B2 /* PeopleTableViewController.swift */; };
 		BDF00B6A1D03F066005A589A /* FTFriendtrackerClient.m in Sources */ = {isa = PBXBuildFile; fileRef = BDF00B631D03F066005A589A /* FTFriendtrackerClient.m */; };
 		BDF00B6B1D03F066005A589A /* FTUpdateLocationModel_info.m in Sources */ = {isa = PBXBuildFile; fileRef = BDF00B651D03F066005A589A /* FTUpdateLocationModel_info.m */; };
 		BDF00B6C1D03F066005A589A /* FTUpdateLocationModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BDF00B671D03F066005A589A /* FTUpdateLocationModel.m */; };
@@ -61,6 +62,7 @@
 		BD489C4B1D03DBC0007C4F3E /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		BD489C4D1D03DBC8007C4F3E /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		BD489C4F1D03DBD0007C4F3E /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		BD739C4D1D048482005FE8B2 /* PeopleTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeopleTableViewController.swift; sourceTree = "<group>"; };
 		BDF00B621D03F066005A589A /* FTFriendtrackerClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTFriendtrackerClient.h; sourceTree = "<group>"; };
 		BDF00B631D03F066005A589A /* FTFriendtrackerClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTFriendtrackerClient.m; sourceTree = "<group>"; };
 		BDF00B641D03F066005A589A /* FTUpdateLocationModel_info.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTUpdateLocationModel_info.h; sourceTree = "<group>"; };
@@ -134,6 +136,7 @@
 				BDFD1B6F1D034699008C0372 /* AppDelegate.swift */,
 				BDFD1B711D034699008C0372 /* StartViewController.swift */,
 				BDFD1B731D034699008C0372 /* Main.storyboard */,
+				BD739C4D1D048482005FE8B2 /* PeopleTableViewController.swift */,
 				BD392FCA1D03BD7F005ABBAB /* MapViewController.swift */,
 				BDFD1B831D034C00008C0372 /* PasscodeViewController.swift */,
 				BDFD1B851D034C09008C0372 /* DangerViewController.swift */,
@@ -236,6 +239,7 @@
 				BDF00B6A1D03F066005A589A /* FTFriendtrackerClient.m in Sources */,
 				BDFD1B841D034C00008C0372 /* PasscodeViewController.swift in Sources */,
 				BDF00B6C1D03F066005A589A /* FTUpdateLocationModel.m in Sources */,
+				BD739C4E1D048482005FE8B2 /* PeopleTableViewController.swift in Sources */,
 				BD392FCB1D03BD7F005ABBAB /* MapViewController.swift in Sources */,
 				BDF00B6B1D03F066005A589A /* FTUpdateLocationModel_info.m in Sources */,
 				BDFD1B721D034699008C0372 /* StartViewController.swift in Sources */,
